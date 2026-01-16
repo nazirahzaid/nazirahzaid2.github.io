@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f4f8;
+}
+
+.hero {
+    position: relative; /* reference for absolute positioning */
+    min-height: 100vh;
+    width: 100%;
+    background: url("hero.jpg") center/cover no-repeat;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 40, 80, 0.65);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    margin: 10px 0;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+
+.quick-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;      /* optional mobile padding */
+}
+
+.menu-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #1f3c5c;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.menu-card img {
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.menu-card p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.menu-card strong {
+    font-size: 16px;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+
+
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 span {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: auto;
+        padding-bottom: 140px;
+    }
+
+    .hero h1 span {
+        font-size: 26px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .quick-menu {
+        bottom: -90px;
+    }
+}

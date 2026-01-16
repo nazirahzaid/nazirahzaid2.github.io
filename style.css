@@ -1,0 +1,536 @@
+    /* =====================
+       GLOBAL
+    ====================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    body.home .container {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+   body.home main h2 {
+     text-decoration: none;
+   }
+
+
+    /* =====================
+       HEADER - ALL PAGES
+    ====================== */
+    header {
+      background: #1f3c5c;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-text h1 {
+      font-size: 24px;
+    }
+
+    .header-text p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* =====================
+       NAVIGATION - ALL PAGES
+    ====================== */
+    nav ul {
+      list-style: none;
+      background: #2c5d87;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: white;
+      padding: 12px 18px;
+      display: block;
+      text-decoration: none;
+      border-right: 1px solid white;
+    }
+
+    nav ul li:last-child a {
+      border-right: none;
+    }
+
+    nav ul li a:hover {
+      background: lightgray;
+      color: black;
+    }
+
+    /* =====================
+       VIDEO BANNER - ALL PAGES
+    ====================== */
+    .video-banner {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .video-banner video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* =====================
+       ANNOUNCEMENT BAR - ALL PAGES
+    ====================== */
+    .announcement-bar {
+      display: flex;
+      align-items: center;
+      background: #2c5d87;
+      color: white;
+      font-weight: bold;
+    }
+
+    .announcement-label {
+      background: #1f3c5c;
+      padding: 12px 20px;
+      min-width: 140px;
+      text-align: center;
+    }
+
+    .announcement-text {
+      overflow: hidden;
+      white-space: nowrap;
+      flex: 1;
+    }
+
+    .scrolling-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+      background: #f2f4f8;
+      border: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .scrolling-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 30s linear infinite;
+    }
+
+    .scrolling-content:hover {
+      animation-play-state: paused;
+    }
+
+    .see-more {
+      color: #ffd700;
+      margin-left: 10px;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(25%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* =====================
+       MAIN CONTENT - ALL PAGES
+    ====================== */
+    main {
+      flex: 1 0 auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    main h2 {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    main p {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .img {
+      max-width: 200px;
+      width: 100%;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+/* ==========================
+        CARDS - ABOUT US PAGE
+=============================*/
+
+.portfolio-content {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      margin: 0 auto;
+      margin-top: 0;
+    }
+
+.portfolio-content h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+}
+
+.card-aboutme {
+  background-color: #2c5d87;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  width: 30%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.portfolio-content img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 10%;
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: #ffffff;
+}
+
+
+/*==========================
+      FOR NEWS PAGE
+============================*/
+
+.container-news {
+border-radius: 8px;
+padding: 20px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 100%;
+max-width: 1000px;
+margin: 40px auto;
+padding: 0 20px;
+}
+
+
+.badge {
+display: inline-block;
+padding: 4px 10px;
+border-radius: 12px;
+font-size: 12px;
+font-weight: bold;
+margin-bottom: 10px;
+width: fit-content;
+}
+
+
+.card h3 {
+margin: 0 0 10px;
+font-size: 18px;
+}
+
+.announcement {
+background: #ffe3e3;
+color: #b00020;
+}
+
+
+.news {
+background: #e3f0ff;
+color: #003f88;
+}
+
+
+.event {
+background: #e3ffe8;
+color: #1b7f3c;
+}
+
+.date {
+font-size: 13px;
+color: #777;
+margin-bottom: 10px;
+}
+
+
+.card {
+  margin-bottom: 15px;
+  border-bottom: 1px solid;
+}
+
+.card p {
+font-size: 14px;
+line-height: 1.5;
+flex-grow: 1;
+text-align: left;
+}
+
+
+.read-more {
+margin-top: 15px;
+text-decoration: none;
+color: #1f3c5c;
+font-weight: bold;
+font-size: 14px;
+}
+
+
+
+/* =========================
+        EVENTS PAGE
+============================ */
+
+.grid-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  margin-top: 30px;
+}
+
+
+.grid-cards h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.grid-cards p {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.grid-cards .card-aboutme {
+  flex: 1 1 calc(33.333% - 13.33px); /* 3 cards in a row with gap adjustment */
+  max-width: 32%; /* optional for strict width control */
+}
+
+
+/* =========================
+         FOR GALLERY PAGE
+============================ */
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .accordion-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .accordion-item input {
+    display: none;
+  }
+
+  .accordion-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #2c5d87;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .accordion-label:hover {
+    background: #1f3c5c;
+  }
+
+  .accordion-label::after {
+    content: '+';
+    font-size: 20px;
+    transition: transform 0.3s;
+  }
+
+  input:checked + .accordion-label::after {
+    content: '-';
+    transform: rotate(180deg);
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f1f4f8;
+    padding: 0 20px;
+  }
+
+  input:checked ~ .accordion-content {
+    max-height: 500px; /* Enough for content */
+    padding: 15px 20px;
+  }
+
+  .thumbnails {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .thumbnails img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .thumbnails img:hover {
+    transform: scale(1.05);
+    border-color: #2c5d87;
+  }
+
+  .view-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #2c5d87;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    position: relative;
+    text-align: center;
+  }
+
+  .view-button:hover {
+    background: #1f3c5c;
+  }
+
+  .view-button::after {
+    content: "You will be redirected to Google Drive";
+    display: block;
+    font-size: 12px;
+    color: #000;
+    margin-top: 5px;
+  }
+
+
+/* =========================
+        CONTACT PAGE
+============================ */
+
+container-contact {
+  margin: 0 auto;
+}
+
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+      }
+
+.table-divider {
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+.table-divider th,
+.table-divider td {
+      padding: 10px;
+      border-bottom: 0;
+      text-align: left;
+      color: #000000;
+    }
+
+    /* =====================
+       FOOTER - ALL PAGES
+    ====================== */
+    footer {
+      background: #1f3c5c;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    /* =====================
+       RESPONSIVE
+    ====================== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+
+      .video-banner {
+        height: 220px;
+      }
+
+  .grid-cards {
+    flex-direction: column;
+  }
+
+  .grid-cards .card-aboutme {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
